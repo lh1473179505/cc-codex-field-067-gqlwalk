@@ -1,0 +1,3 @@
+query MerchantRoot {
+  merchant { id name orders(first: 2, after: null) { edges { cursor node { id code items(first: 2, after: null) { edges { cursor node { id sku qty } } pageInfo { hasNextPage endCursor } } } } pageInfo { hasNextPage endCursor } } }
+}

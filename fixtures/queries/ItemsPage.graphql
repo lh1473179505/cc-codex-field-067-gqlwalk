@@ -1,0 +1,3 @@
+query ItemsPage($orderId: ID!, $after: String) {
+  merchant { order(id: $orderId) { id items(first: 2, after: $after) { edges { cursor node { id sku qty } } pageInfo { hasNextPage endCursor } } } }
+}
